@@ -44,27 +44,17 @@ const Detail = ({ }) => {
   const month = dateObject.toLocaleString('default', { month: 'long' })
   const year = dateObject.toLocaleString('default', { year: 'numeric' })
 
-  const sincePurchase = (recentValuation, originalPurchasePrice) => {
-    return recentValuation - originalPurchasePrice
-  }
-  const sincePurchaseAmount = sincePurchase(account.recentValuation.amount, account.originalPurchasePrice)
+  const sincePurchase = account.recentValuation.amount - account.originalPurchasePrice
 
-  const sincePurchasePercentage = (sincePurchase, originalPurchasePrice) => {
-    return (sincePurchase / originalPurchasePrice) * 100
-  }
-  const sincePurchasePercentageAmount = sincePurchasePercentage(sincePurchaseAmount, account.originalPurchasePrice)
+  const sincePurchasePercentage = (sincePurchase / account.originalPurchasePrice) * 100
 
   const numberOfYearsSincePurchase = (date) => {
     const currentYear = new Date().getFullYear()
     const purchaseYear = date.getFullYear()
     return currentYear - purchaseYear
   }
-  const numberOfYearsSincePurchaseAmount = numberOfYearsSincePurchase(dateObject)
 
-  const annualAppreciation = (sincePurchasePercentage, numberOfYearsSincePurchase) => {
-    return sincePurchasePercentage / numberOfYearsSincePurchase
-  }
-  const annualAppreciationAmount = annualAppreciation(sincePurchasePercentageAmount, numberOfYearsSincePurchaseAmount)
+  const annualAppreciation = sincePurchasePercentage / numberOfYearsSincePurchase(dateObject)
 
   return (
     <Inset>
@@ -105,11 +95,11 @@ const Detail = ({ }) => {
             <AccountListItem><InfoText>Puchased for <strong>£{ account.originalPurchasePrice.toLocaleString("en-US") } </strong>in { month } { year }</InfoText></AccountListItem>
               <AccountListItemRow>
                 <InfoText>Since purchase </InfoText>
-                <InfoTextGreen>£{ sincePurchaseAmount.toLocaleString("en-US") } ({ sincePurchasePercentageAmount })%</InfoTextGreen>
+                <InfoTextGreen>£{ sincePurchase.toLocaleString("en-US") } ({ sincePurchasePercentage })%</InfoTextGreen>
               </AccountListItemRow>
             <AccountListItemRow>
               <InfoText>Annual Appreciation </InfoText>
-              <InfoTextGreen>{ annualAppreciationAmount }%</InfoTextGreen>
+              <InfoTextGreen>{ annualAppreciation }%</InfoTextGreen>
             </AccountListItemRow>
           </AccountList>
         </RowContainer>
