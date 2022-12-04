@@ -103,12 +103,10 @@ const Detail = ({ }) => {
         <RowContainer>
           <AccountList>
             <AccountListItem><InfoText>Puchased for <strong>£{ account.originalPurchasePrice.toLocaleString("en-US") } </strong>in { month } { year }</InfoText></AccountListItem>
-            <AccountListItem>
               <AccountListItemRow>
                 <InfoText>Since purchase </InfoText>
                 <InfoTextGreen>£{ sincePurchaseAmount.toLocaleString("en-US") } ({ sincePurchasePercentageAmount })%</InfoTextGreen>
               </AccountListItemRow>
-            </AccountListItem>
             <AccountListItemRow>
               <InfoText>Annual Appreciation </InfoText>
               <InfoTextGreen>{ annualAppreciationAmount }%</InfoTextGreen>
