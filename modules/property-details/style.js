@@ -34,6 +34,7 @@ export const InfoTextGreen = styled.div`
   background-color: ${(props) => props.theme.colors.green};
   border-radius: 15px;
   padding: 3px 20px;
+  font-weight: bold;
 `;
 
 export const AccountSection = styled.div`
