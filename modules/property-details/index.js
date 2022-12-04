@@ -110,7 +110,7 @@ const Detail = ({ }) => {
               </AccountListItemRow>
             </AccountListItem>
             <AccountListItemRow>
-                <InfoText>Annual Appreciation </InfoText>
+              <InfoText>Annual Appreciation </InfoText>
               <InfoTextGreen>{ annualAppreciationAmount }%</InfoTextGreen>
             </AccountListItemRow>
           </AccountList>
