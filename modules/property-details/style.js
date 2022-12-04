@@ -30,7 +30,7 @@ export const InfoTextGreen = styled.div`
   line-height: 1.2;
   font-size: ${(props) => props.theme.typography.m.fontSize};
   color: ${(props) => props.theme.colors.neutral[600]};
-  background-color: #c2f7e1;
+  background-color: ${(props) => props.theme.colors.green};
   border-radius: 15px;
   padding: 3px 20px;
 `;
