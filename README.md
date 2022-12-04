@@ -12,20 +12,21 @@ This prototype is built using NextJS and makes use of styled components
 
 We would like you to:
 
-----
+---
 
 **Required**: Add a "Valuation changes" section to the page. `design-mock-up.png` has been provided as a design reference for the page and `detail-design-mock-up.png` shows the specific feature to be added, including how it is styled responsively. Make use of existing fonts and styles to match the look and feel of the existing app rather than trying to match the mock up exactly.
 
- ```
-  sincePurchase = `recentValuation - originalPurchasePrice`
-  sincePurchasePercentage = `sincePurchase / originalPurchasePrice * 100`
-  annualAppreciation =`sincePurchasePercentage / number of years since purchase`
-  colours used for the positive change in the image are #c2f7e1 and #006b57
- ```
+```
+ sincePurchase = `recentValuation - originalPurchasePrice`
+ sincePurchasePercentage = `sincePurchase / originalPurchasePrice * 100`
+ annualAppreciation =`sincePurchasePercentage / number of years since purchase`
+ colours used for the positive change in the image are #c2f7e1 and #006b57
+```
 
 Consider what other data this component could take and how that might affect your theming and solution
 
 Consider opportunities to reduce repetition in the code and increase legibility
+
 - This could be creating new components, simplifying existing ones, extracting helper function to simplify code or styling
 - Show us what you can do and implement a few of these if you have time
 
@@ -34,14 +35,15 @@ We also ask that you update the readme with answers to the following questions
 1. Given more time, what other changes you would have liked to make?
 2. What UX or design improvements or alterations might you suggest? These can be to existing components or completely new ideas.
 
-----
+---
 
 **Optional**: If you have time, show us some more by fetching the data from the api
-  - Currently the property data is hardcoded in the component, but it is also avaible via a Next.js api route
-  - Details of a property are located in the API at `/api/account`, use this endpoint to populate the app with data
-  - Use whichever method or library you are comfortable with to fetch the data
 
-----
+- Currently the property data is hardcoded in the component, but it is also avaible via a Next.js api route
+- Details of a property are located in the API at `/api/account`, use this endpoint to populate the app with data
+- Use whichever method or library you are comfortable with to fetch the data
+
+---
 
 Try to:
 
@@ -55,7 +57,7 @@ We prefer:
 - `styled-components` for styling
 - `prop-types` for typechecking
 
-----
+---
 
 **IMPORTANT**
 
@@ -88,7 +90,7 @@ To learn more about Next.js, take a look at the following resources:
 
 ## Improvements
 
-- Create a new component for Valuation Changes then import back in
+- Create new components for all main sections (Estimated Value, Property Details, Valuation Change and Mortgage) then import back in
 - Extract helper functions to utility file to be used elsewhere
 - Make sure Annual appreciation calculated more specifically in terms of months
 - Add styling using [Styled Components](https://docs.google.com/document/d/1LiEsRP4vHps8GfvT9gufufsgW402EHzkHmf-nSRRQvw/edit#bookmark=kix.irqig6nb9u88)
