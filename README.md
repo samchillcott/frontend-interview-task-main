@@ -29,7 +29,7 @@ Consider opportunities to reduce repetition in the code and increase legibility
 - This could be creating new components, simplifying existing ones, extracting helper function to simplify code or styling
 - Show us what you can do and implement a few of these if you have time
 
-We also ask that you update the readme with answers to the following questions 
+We also ask that you update the readme with answers to the following questions
 
 1. Given more time, what other changes you would have liked to make?
 2. What UX or design improvements or alterations might you suggest? These can be to existing components or completely new ideas.
@@ -63,7 +63,7 @@ Most of your work should take place inside the `components/` and `modules/` dire
 
 ### Notes
 
-We recommend working through the list of requirements above but don't expect you to finish all of them. We're more interested in seeing how you approach the problem than seeing a perfect example, please only spend a few hours working on it. 
+We recommend working through the list of requirements above but don't expect you to finish all of them. We're more interested in seeing how you approach the problem than seeing a perfect example, please only spend a few hours working on it.
 
 On completion, email a link to your repository to your contact at Moneyhub, and ensure it is publicly accessible.
 
@@ -85,3 +85,12 @@ To learn more about Next.js, take a look at the following resources:
 
 - [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
 - [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+
+## Improvements
+
+- Create a new component for Valuation Changes then import back in
+- Extract helper functions to utility file to be used elsewhere
+- Make sure Annual appreciation calculated more specifically in terms of months
+- Add styling using [Styled Components](https://docs.google.com/document/d/1LiEsRP4vHps8GfvT9gufufsgW402EHzkHmf-nSRRQvw/edit#bookmark=kix.irqig6nb9u88)
+- Fetch from account data from backend using a custom hook such as [useFetch](https://docs.google.com/document/d/1vUXk1J0giEQbStiWyr-9EdYUurZ8roorwUlEbcLqNEI/edit#bookmark=id.gu7dkmz8w4ab)
+- Run all fetches through a backend API call function
