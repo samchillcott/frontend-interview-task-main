@@ -40,8 +40,9 @@ const Detail = ({ }) => {
     mortgage = account.associatedMortgages[0];
   }
 
-  const month = new Date(account.originalPurchasePriceDate).toLocaleString('default', { month: 'long' })
-  const year = new Date(account.originalPurchasePriceDate).toLocaleString('default', { year: 'numeric' })
+  const dateObject = new Date(account.originalPurchasePriceDate)
+  const month = dateObject.toLocaleString('default', { month: 'long' })
+  const year = dateObject.toLocaleString('default', { year: 'numeric' })
 
   const sincePurchase = (recentValuation, originalPurchasePrice) => {
     return recentValuation - originalPurchasePrice
@@ -57,6 +58,7 @@ const Detail = ({ }) => {
     // grab year from originalPurchasePriceDate string
     // deduct that year from current year using date object
   }
+  const numberOfYearsSincePurchaseAmount = numberOfYearsSincePurchase()
 
   const annualAppreciation = (sincePurchasePercentage, numberOfYearsSincePurchase) => {
 
