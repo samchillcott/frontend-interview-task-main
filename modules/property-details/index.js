@@ -4,7 +4,7 @@ import React from "react";
 import { Button } from "../../components/button";
 import RowContainer from "../../components/row-container";
 import {
-  AccountHeadline, AccountLabel, AccountList, AccountListItem, AccountSection, InfoText, Inset
+  AccountHeadline, AccountLabel, AccountList, AccountListItem, AccountListItemRow, AccountSection, InfoText, InfoTextGreen, Inset
 } from "./style";
 
 
@@ -103,8 +103,16 @@ const Detail = ({ }) => {
         <RowContainer>
           <AccountList>
             <AccountListItem><InfoText>Puchased for <strong>£{ account.originalPurchasePrice.toLocaleString("en-US") } </strong>in { month } { year }</InfoText></AccountListItem>
-            <AccountListItem><InfoText>Since purchase £{ sincePurchaseAmount.toLocaleString("en-US") } ({ sincePurchasePercentageAmount })%</InfoText></AccountListItem>
-            <AccountListItem><InfoText>Annual Appreciation { annualAppreciationAmount }%</InfoText></AccountListItem>
+            <AccountListItem>
+              <AccountListItemRow>
+                <InfoText>Since purchase </InfoText>
+                <InfoTextGreen>£{ sincePurchaseAmount.toLocaleString("en-US") } ({ sincePurchasePercentageAmount })%</InfoTextGreen>
+              </AccountListItemRow>
+            </AccountListItem>
+            <AccountListItemRow>
+                <InfoText>Annual Appreciation </InfoText>
+              <InfoTextGreen>{ annualAppreciationAmount }%</InfoTextGreen>
+            </AccountListItemRow>
           </AccountList>
         </RowContainer>
       </AccountSection>

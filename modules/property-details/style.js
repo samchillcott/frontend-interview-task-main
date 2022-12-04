@@ -26,6 +26,15 @@ export const InfoText = styled.div`
   color: ${(props) => props.theme.colors.neutral[600]};
 `;
 
+export const InfoTextGreen = styled.div`
+  line-height: 1.3;
+  font-size: ${(props) => props.theme.typography.m.fontSize};
+  color: ${(props) => props.theme.colors.neutral[600]};
+  background-color: #c2f7e1;
+  border-radius: 15px;
+  padding: 3px;
+`;
+
 export const AccountSection = styled.div`
   padding: ${(props) => props.theme.space.m} 0;
 
@@ -37,6 +46,15 @@ export const AccountSection = styled.div`
 
 export const AccountListItem = styled.div`
   display: flex;
+
+  &:not(:last-of-type) {
+    margin-bottom: ${(props) => props.theme.space.m};
+  }
+`;
+
+export const AccountListItemRow = styled.div`
+  display: flex;
+  justify-content: space-between
 
   &:not(:last-of-type) {
     margin-bottom: ${(props) => props.theme.space.m};

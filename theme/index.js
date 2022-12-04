@@ -29,6 +29,9 @@ export const theme = {
     white: {
       default: "#fff",
     },
+    green: {
+      default: ""
+    }
   },
   typography: {
     xs: {
