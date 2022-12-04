@@ -30,11 +30,10 @@ export const InfoText = styled.div`
 export const InfoTextGreen = styled.div`
   line-height: 1.2;
   font-size: ${(props) => props.theme.typography.m.fontSize};
-  color: ${(props) => props.theme.colors.neutral[600]};
+  color: "#006b57";
   background-color: ${(props) => props.theme.colors.green};
   border-radius: 15px;
   padding: 3px 20px;
-  font-weight: bold;
 `;
 
 export const AccountSection = styled.div`
