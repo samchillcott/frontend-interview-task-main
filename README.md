@@ -96,6 +96,7 @@ To learn more about Next.js, take a look at the following resources:
 - Add styling using [Styled Components](https://docs.google.com/document/d/1LiEsRP4vHps8GfvT9gufufsgW402EHzkHmf-nSRRQvw/edit#bookmark=kix.irqig6nb9u88)
 - Fetch account data from backend using useEffect on page load and a custom hook such as [useFetch](https://docs.google.com/document/d/1vUXk1J0giEQbStiWyr-9EdYUurZ8roorwUlEbcLqNEI/edit#bookmark=id.gu7dkmz8w4ab)
 - Run all fetches/calls through a backend API function (which uses authentication)
+- Check all tags are semantic and [accessible/a11y](https://docs.google.com/document/d/1-S_2KxGHebUj4WqjNHjkpQ2BoFmRwD72cwv3Ss9qz2I/edit#bookmark=id.3uz77nmhgb56)
 
 ## Design & UX Suggestions
 
