@@ -46,11 +46,12 @@ const Detail = ({ }) => {
   const sincePurchase = (recentValuation, originalPurchasePrice) => {
     return recentValuation - originalPurchasePrice
   }
+  const sincePurchaseAmount = sincePurchase(account.recentValuation.amount, account.originalPurchasePrice)
 
   const sincePurchasePercentage = (sincePurchase, originalPurchasePrice) => {
-    console.log(sincePurchase);
     return (sincePurchase / originalPurchasePrice) * 100
   }
+  const sincePurchasePercentageAmount = sincePurchasePercentage(sincePurchaseAmount, account.originalPurchasePrice)
 
   const numberOfYearsSincePurchase = (originalPurchasePriceDate) => {
     // grab year from originalPurchasePriceDate string
@@ -98,7 +99,7 @@ const Detail = ({ }) => {
         <RowContainer>
           <AccountList>
             <AccountListItem><InfoText>Puchased for <strong>£{ account.originalPurchasePrice.toLocaleString("en-US") } </strong>in { month } { year }</InfoText></AccountListItem>
-            <AccountListItem><InfoText>Since purchase £{ sincePurchase(account.recentValuation.amount, account.originalPurchasePrice).toLocaleString("en-US") } ({ sincePurchasePercentage(sincePurchase, account.originalPurchasePrice) })%</InfoText></AccountListItem>
+            <AccountListItem><InfoText>Since purchase £{ sincePurchaseAmount.toLocaleString("en-US") } ({ sincePurchasePercentageAmount })%</InfoText></AccountListItem>
             <AccountListItem><InfoText>Annual Appreciation { annualAppreciation() }%</InfoText></AccountListItem>
           </AccountList>
         </RowContainer>
