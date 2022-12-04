@@ -94,5 +94,7 @@ To learn more about Next.js, take a look at the following resources:
 - Extract helper functions to utility file to be used elsewhere
 - Make sure Annual appreciation calculated more specifically in terms of months
 - Add styling using [Styled Components](https://docs.google.com/document/d/1LiEsRP4vHps8GfvT9gufufsgW402EHzkHmf-nSRRQvw/edit#bookmark=kix.irqig6nb9u88)
-- Fetch from account data from backend using a custom hook such as [useFetch](https://docs.google.com/document/d/1vUXk1J0giEQbStiWyr-9EdYUurZ8roorwUlEbcLqNEI/edit#bookmark=id.gu7dkmz8w4ab)
+- Fetch from account data from backend using useEffect on page load and a custom hook such as [useFetch](https://docs.google.com/document/d/1vUXk1J0giEQbStiWyr-9EdYUurZ8roorwUlEbcLqNEI/edit#bookmark=id.gu7dkmz8w4ab)
 - Run all fetches through a backend API call function
+
+## Design & UX Suggestions

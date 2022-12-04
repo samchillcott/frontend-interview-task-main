@@ -89,7 +89,7 @@ const Detail = ({ }) => {
         </AccountList>
       </AccountSection>
       <AccountSection>
-        <AccountLabel>Property details</AccountLabel>
+        <AccountLabel>Property Details</AccountLabel>
         <RowContainer>
           <AccountList>
             <AccountListItem><InfoText>{ account.name }</InfoText></AccountListItem>
