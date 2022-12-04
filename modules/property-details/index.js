@@ -54,15 +54,17 @@ const Detail = ({ }) => {
   }
   const sincePurchasePercentageAmount = sincePurchasePercentage(sincePurchaseAmount, account.originalPurchasePrice)
 
-  const numberOfYearsSincePurchase = (originalPurchasePriceDate) => {
-    // grab year from originalPurchasePriceDate string
-    // deduct that year from current year using date object
+  const numberOfYearsSincePurchase = (date) => {
+    const currentYear = new Date().getFullYear()
+    const purchaseYear = date.getFullYear()
+    return currentYear - purchaseYear
   }
-  const numberOfYearsSincePurchaseAmount = numberOfYearsSincePurchase()
+  const numberOfYearsSincePurchaseAmount = numberOfYearsSincePurchase(dateObject)
 
   const annualAppreciation = (sincePurchasePercentage, numberOfYearsSincePurchase) => {
-
+    return sincePurchasePercentage / numberOfYearsSincePurchase
   }
+  const annualAppreciationAmount = annualAppreciation(sincePurchasePercentageAmount, numberOfYearsSincePurchaseAmount)
 
   return (
     <Inset>
@@ -102,7 +104,7 @@ const Detail = ({ }) => {
           <AccountList>
             <AccountListItem><InfoText>Puchased for <strong>£{ account.originalPurchasePrice.toLocaleString("en-US") } </strong>in { month } { year }</InfoText></AccountListItem>
             <AccountListItem><InfoText>Since purchase £{ sincePurchaseAmount.toLocaleString("en-US") } ({ sincePurchasePercentageAmount })%</InfoText></AccountListItem>
-            <AccountListItem><InfoText>Annual Appreciation { annualAppreciation() }%</InfoText></AccountListItem>
+            <AccountListItem><InfoText>Annual Appreciation { annualAppreciationAmount }%</InfoText></AccountListItem>
           </AccountList>
         </RowContainer>
       </AccountSection>
